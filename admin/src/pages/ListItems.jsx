@@ -12,7 +12,7 @@ const ListItems = ({ token }) => {
     try {
       console.log(token)
       //getting products from the backend 
-      const response = await axios.get("http://localhost:4000/api/v1/get-Items", {
+      const response = await axios.get("https://ecommerce-29ul.onrender.com//api/v1/get-Items", {
         headers: {
           "Auth": token, // Correct format for token
         },
@@ -47,7 +47,7 @@ const ListItems = ({ token }) => {
     try {
       const response = await axios.post(
         //deleting the product  based on id
-        "http://localhost:4000/api/v1/deleteItem",
+        "https://ecommerce-29ul.onrender.com//api/v1/deleteItem",
         { id: itemId },
         {
           headers: {
@@ -94,7 +94,7 @@ const ListItems = ({ token }) => {
                 <td className="py-4 px-4">
                   {/* Display image dynamically */}
                   <img
-                    src={`http://localhost:4000/images/${item.imgSrc}`}
+                    src={`https://ecommerce-29ul.onrender.com//images/${item.imgSrc}`}
                     alt={item.name}
                     className="w-24 h-24 object-cover rounded-lg shadow-sm"
                   />

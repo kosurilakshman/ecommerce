@@ -6,7 +6,7 @@ import React from "react";
 
 const Orders = ({ token }) => {
   const [orders, setOrders] = useState([]);
-  const backendUrl = "http://localhost:4000"; // Define your backend URL
+  const backendUrl = "https://ecommerce-29ul.onrender.com/"; // Define your backend URL
 
   // Fetch all orders
   const fetchAllOrders = async () => {
@@ -119,7 +119,7 @@ const Orders = ({ token }) => {
                 <td className="px-4 py-2 text-slate-500">{order.orderId}</td>
                 <td className="px-4 py-2">
                   <img
-                    src={`http://localhost:4000/images/${order.imgSrc}`}
+                    src={`https://ecommerce-29ul.onrender.com//images/${order.imgSrc}`}
                     className="w-[240px]"
                     alt={order.name}
                   />

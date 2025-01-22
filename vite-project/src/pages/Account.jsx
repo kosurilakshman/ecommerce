@@ -110,7 +110,7 @@ const Account = ({ token, setToken }) => {
     if (currentState === 'signUp') {//sign up fetching
       if (validateForm()) {
         try {
-          const response = await fetch('http://localhost:4000/v1/ecommerce/api/register', {
+          const response = await fetch('https://ecommerce-29ul.onrender.com//v1/ecommerce/api/register', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ const Account = ({ token, setToken }) => {
       });
     } else if (currentState === 'login') {// login api using post.We are senting (email,password) to backend
       try {
-        const response = await fetch('http://localhost:4000/v1/ecommerce/api/login', {
+        const response = await fetch('https://ecommerce-29ul.onrender.com//v1/ecommerce/api/login', {
           headers: {
             'Content-Type': 'application/json',
           },

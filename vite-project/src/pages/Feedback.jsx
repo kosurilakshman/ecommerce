@@ -32,7 +32,7 @@ const Feedback = ({ token }) => {
     e.preventDefault();
 
     // Send the feedback data to the server
-    const result = await fetch('http://localhost:4000/api/v1/feedback', {
+    const result = await fetch('https://ecommerce-29ul.onrender.com//api/v1/feedback', {
       method: 'POST',
       body: JSON.stringify({ stars: currentValue, message }),
       headers: {

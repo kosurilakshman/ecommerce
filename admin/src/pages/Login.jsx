@@ -114,7 +114,7 @@ const Login = ({ token, setToken }) => {
       if (validateForm()) {
         try {
           //sending formdata to back end server
-          const response = await fetch('http://localhost:4000/api/v1/admin-register', {
+          const response = await fetch('https://ecommerce-29ul.onrender.com//api/v1/admin-register', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ const Login = ({ token, setToken }) => {
     } else if (currentState === 'login') {
       try {
         //sendating email,password to backend
-        const response = await fetch('http://localhost:4000/api/v1/admin-login', {
+        const response = await fetch('https://ecommerce-29ul.onrender.com//api/v1/admin-login', {
           headers: {
             'Content-Type': 'application/json',
           },

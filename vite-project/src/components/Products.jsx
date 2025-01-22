@@ -71,7 +71,7 @@ const Products = () => {
                 <img
                   src={
                     item.imgSrc
-                      ? `http://localhost:4000/images/${item.imgSrc}`
+                      ? `https://ecommerce-29ul.onrender.com//images/${item.imgSrc}`
                       : `${item.imgSrc}`
                   }
                   alt={item.title}
