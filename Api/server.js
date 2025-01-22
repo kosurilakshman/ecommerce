@@ -18,7 +18,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.use(cors({
-  origin: ["http://localhost:5173","http://localhost:5174"], // Exact origin of your frontend
+  origin: ["https://ecommerce-1-frbr.onrender.com"], // Exact origin of your frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Auth"],
 }));
@@ -54,3 +54,4 @@ mongoose.connect("mongodb+srv://mernStack:mern12345@cluster0.inoow.mongodb.net/"
 app.listen(port, () => {
   console.log(`Server running on port http://localhost:${port}`);
 });
+git
