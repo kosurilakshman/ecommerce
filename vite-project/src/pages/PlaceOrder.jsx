@@ -15,7 +15,7 @@ const Orders = ({ token }) => {
     }
 
     try {
-      const response = await axios.get('https://ecommerce-29ul.onrender.com//api/v1/orders', {
+      const response = await axios.get('https://server-19qv.onrender.com/api/v1/orders', {
         headers: {
           'Content-Type': 'application/json',
           auth: token,
@@ -57,7 +57,7 @@ const Orders = ({ token }) => {
 
     try {
       const response = await axios.post(
-        'https://ecommerce-29ul.onrender.com//api/v1/order/cancel',
+        'https://server-19qv.onrender.com/api/v1/order/cancel',
         { orderId }, // Send orderId to backend
         {
           headers: {
@@ -115,7 +115,7 @@ const Orders = ({ token }) => {
                 <tr key={index} className="border-b hover:bg-gray-50">
                   <td className="px-6 py-4">
                     <img
-                      src={order.imgSrc ? `https://ecommerce-29ul.onrender.com//images/${order.imgSrc}` : `${order.imgSrc}`}
+                      src={order.imgSrc ? `https://server-19qv.onrender.com/images/${order.imgSrc}` : `${order.imgSrc}`}
                       className="w-[140px] h-[140px] object-cover rounded-lg"
                       alt={order.name}
                     />

@@ -39,7 +39,7 @@ const Add= ({token}) => {
 
     try {
       //sending product data to the server
-      const response = await axios.post("https://ecommerce-29ul.onrender.com//api/v1/products/addProduct", form, {
+      const response = await axios.post("https://server-19qv.onrender.com/api/v1/products/addProduct", form, {
         headers: {
           "Content-Type": "multipart/form-data", // Ensure the correct content type is sent
           "Auth":token,

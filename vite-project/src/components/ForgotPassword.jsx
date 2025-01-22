@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     }
 
     try {
-      const response = await axios.post("https://ecommerce-29ul.onrender.com//api/food/forgot-password", { email });
+      const response = await axios.post("https://server-19qv.onrender.com/api/food/forgot-password", { email });
 
       if (response.data && response.data.status) {
         setTimeout(() => {

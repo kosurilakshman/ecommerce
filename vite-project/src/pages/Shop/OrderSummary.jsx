@@ -73,7 +73,7 @@ const OrderSummary = ({ token }) => {
       }];
 
       // Call API to place the order
-      const response = await fetch("https://ecommerce-29ul.onrender.com//api/zing/place-order", {
+      const response = await fetch("https://server-19qv.onrender.com/api/zing/place-order", {
         method: "POST",
         body: JSON.stringify({
           amount,
@@ -102,7 +102,7 @@ const OrderSummary = ({ token }) => {
       
           try {
             // Validate payment on the backend
-            const validateRes = await fetch("https://ecommerce-29ul.onrender.com//api/zing/order/validate", {
+            const validateRes = await fetch("https://server-19qv.onrender.com/api/zing/order/validate", {
               method: "POST",
               body: JSON.stringify(body),
               headers: {

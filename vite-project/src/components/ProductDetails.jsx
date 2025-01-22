@@ -14,7 +14,7 @@ const ProductDetails = () => {
   const fetchProducts = async () => {
     try {
       //getting the product details based on id
-      const resp = await axios.get(`https://ecommerce-29ul.onrender.com//api/v1/products/${id}`, {
+      const resp = await axios.get(`https://server-19qv.onrender.com/api/v1/products/${id}`, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -53,7 +53,7 @@ const ProductDetails = () => {
           {/* Left side: Product Image */}
           <div className="w-1/2">
             <img
-              src={singleProduct.imgSrc ? `https://ecommerce-29ul.onrender.com//images/${singleProduct.imgSrc}` :`${singleProduct.imgSrc}`}
+              src={singleProduct.imgSrc ? `https://server-19qv.onrender.com/images/${singleProduct.imgSrc}` :`${singleProduct.imgSrc}`}
               alt={singleProduct.title}
               className="w-full h-70 object-cover rounded-lg shadow-lg"
             />

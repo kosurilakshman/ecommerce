@@ -113,7 +113,7 @@ function OrderSummary({ token }) {
         cartItems: cart
       };
      // passing the optiond to post  api
-      const res = await axios.post("https://ecommerce-29ul.onrender.com//api/v1/payment/createOrder", options);
+      const res = await axios.post("https://server-19qv.onrender.com/api/v1/payment/createOrder", options);
       const data = res.data;
 
       const paymentObject = new window.Razorpay({
@@ -137,7 +137,7 @@ function OrderSummary({ token }) {
           };
           // passing the option 2 the post and verifying the order
           const res = await axios.post(
-            "https://ecommerce-29ul.onrender.com//api/v1/payment/verifyOrder",
+            "https://server-19qv.onrender.com/api/v1/payment/verifyOrder",
             options2,
             {
               headers: {

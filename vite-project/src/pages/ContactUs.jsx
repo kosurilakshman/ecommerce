@@ -13,7 +13,7 @@ const ContactUs = ({ token }) => {
     e.preventDefault();
 
     try {
-      let result = await fetch('https://ecommerce-29ul.onrender.com//v1/ecommerce/api/contact-us', {
+      let result = await fetch('https://server-19qv.onrender.com/v1/ecommerce/api/contact-us', {
         method: 'POST',
         body: JSON.stringify({ name, email, message }),
         headers: {
@@ -42,7 +42,7 @@ const ContactUs = ({ token }) => {
         access_key: "50363ece-319e-43dd-82d3-a3f9f120730d",
       };
 
-      const res = await fetch("https://ecommerce-29ul.onrender.com//v1/ecommerce/api/contact-us", {
+      const res = await fetch("https://server-19qv.onrender.com/v1/ecommerce/api/contact-us", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

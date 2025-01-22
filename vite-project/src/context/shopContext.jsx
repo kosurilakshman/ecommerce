@@ -19,7 +19,7 @@ const ShopContextProvider = ({ children }) => {
   const fetchProducts = async () => {
     try {
       const resp = await axios.get(
-        "https://ecommerce-29ul.onrender.com//api/v1/products/all",
+        "https://server-19qv.onrender.com/api/v1/products/all",
         {
           headers: {
             "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const ShopContextProvider = ({ children }) => {
   const fetchCart = async () => {
     try {
       console.log("Token:", token); // Log the token to ensure it's correct
-      const res = await axios.get("https://ecommerce-29ul.onrender.com//api/v1/usercart", {
+      const res = await axios.get("https://server-19qv.onrender.com/api/v1/usercart", {
         headers: {
           auth: token, // Send the token in the headers
         },
@@ -78,7 +78,7 @@ const ShopContextProvider = ({ children }) => {
   const addTocart = async (productId, title, price, description, qty, imgSrc) => {
     try {
       const res = await axios.post(
-        "https://ecommerce-29ul.onrender.com//api/v1/cart",
+        "https://server-19qv.onrender.com/api/v1/cart",
         { productId, title, price, description, qty, imgSrc },
         {
           headers: {
@@ -135,7 +135,7 @@ const ShopContextProvider = ({ children }) => {
 
     try {
       const res = await axios.post(
-        "https://ecommerce-29ul.onrender.com//api/v1/updateCart", // URL for updating cart
+        "https://server-19qv.onrender.com/api/v1/updateCart", // URL for updating cart
         { productId, qty },
         {
           headers: {
@@ -170,7 +170,7 @@ const ShopContextProvider = ({ children }) => {
     try {
       const newQty = qty - 1;
       const res = await axios.post(
-        "https://ecommerce-29ul.onrender.com//api/v1/decreaseQuantity", // URL for decreasing cart item quantity
+        "https://server-19qv.onrender.com/api/v1/decreaseQuantity", // URL for decreasing cart item quantity
         { productId, qty: newQty },
         {
           headers: { auth: token },
@@ -196,7 +196,7 @@ const ShopContextProvider = ({ children }) => {
   const removeCartItem = async (productId) => {
     try {
       const res = await axios.post(
-        "https://ecommerce-29ul.onrender.com//api/v1/removeCart",
+        "https://server-19qv.onrender.com/api/v1/removeCart",
         { productId },
         {
           headers: { auth: token }, // Send the token for authentication

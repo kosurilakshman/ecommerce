@@ -34,7 +34,7 @@ const Cart = () => {
                   <td className="py-2 px-4">
                     <div className="flex items-center">
                       <img
-                        src={item.imgSrc ? `https://ecommerce-29ul.onrender.com//images/${item.imgSrc}` :`${item.imgSrc}`}
+                        src={item.imgSrc ? `https://server-19qv.onrender.com/images/${item.imgSrc}` :`${item.imgSrc}`}
                         alt={item.title}
                         className="w-16 h-16 object-cover mr-4"
                       />
