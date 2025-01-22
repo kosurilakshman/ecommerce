@@ -15,7 +15,7 @@ import { configDotenv } from "dotenv";
 
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(cors({
   origin: ["http://localhost:5173","http://localhost:5174"], // Exact origin of your frontend
@@ -39,13 +39,16 @@ app.use('/api/v1/',orderRouter)
 app.use('/images',express.static(('uploads')))
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URL, {
-  dbName: "E_CommerceWebsite"
-}).then(() => {
-  console.log("Database connected....");
-}).catch((err) => {
-  console.log("Error:", err);
-});
+mongoose.connect("mongodb+srv://mernStack:mern12345@cluster0.inoow.mongodb.net/", {
+  dbName: "E_CommerceWebsite",
+})
+  .then(() => {
+    console.log("Database connected....");
+  })
+  .catch((err) => {
+    console.error("Error:", err);
+  });
+
 
 // Start the server
 app.listen(port, () => {
