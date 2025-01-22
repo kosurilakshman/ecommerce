@@ -54,4 +54,3 @@ mongoose.connect("mongodb+srv://mernStack:mern12345@cluster0.inoow.mongodb.net/"
 app.listen(port, () => {
   console.log(`Server running on port http://localhost:${port}`);
 });
-git
