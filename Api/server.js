@@ -18,7 +18,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.use(cors({
-  origin: [""], // Exact origin of your frontend
+  origin: ["https://frontend-ps1t.onrender.com"], // Exact origin of your frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Auth"],
 }));
