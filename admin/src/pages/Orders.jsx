@@ -25,6 +25,17 @@ const Orders = ({ token }) => {
 
       if (response.data.success) {
         const ordersData = response.data.orders;
+        console.log("od",ordersData)
+          
+
+
+
+
+
+
+
+
+
 
         // Sort orders by date in descending order (most recent first)
         ordersData.sort((a, b) => new Date(b.date) - new Date(a.date));
