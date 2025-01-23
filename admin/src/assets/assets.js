@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = ''
+export const url = 'https://server-19qv.onrender.com'
