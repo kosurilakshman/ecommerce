@@ -62,7 +62,7 @@ const Navbar = ({token,setToken}) => {
               <Link to="/">Home</Link>
             </li>
             <li className="link">
-              <Link to="/orders">orders</Link>
+              <Link to="/orders">Orders</Link>
             </li>
             <li className="link">
               <Link to="/contact-us">Contact</Link>
@@ -87,7 +87,7 @@ const Navbar = ({token,setToken}) => {
                   <i className="ri-shopping-cart-line"></i>
                   <sup className="text-sm inline-block px-1.5 text-white rounded-full bg-primary text-center">
                     {/* items cart length */}
-                  <p>Items in cart: {cart.length}</p> 
+                  <p>Cart: {cart.length}</p> 
 
           
                   </sup>
